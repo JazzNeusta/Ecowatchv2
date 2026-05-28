@@ -1,0 +1,37 @@
+.ew-alert {
+  padding: 14px 16px;
+  border: 1px solid var(--ew-color-border);
+  border-radius: var(--ew-radius-md);
+  background: var(--ew-color-surface);
+}
+
+.ew-alert strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ew-color-text);
+}
+
+.ew-alert p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.ew-alert--info {
+  border-color: rgba(56, 189, 248, 0.32);
+  background: var(--ew-color-secondary-soft);
+}
+
+.ew-alert--success {
+  border-color: rgba(34, 200, 117, 0.32);
+  background: var(--ew-color-primary-soft);
+}
+
+.ew-alert--warning {
+  border-color: rgba(245, 158, 11, 0.32);
+  background: var(--ew-color-warning-soft);
+}
+
+.ew-alert--danger {
+  border-color: rgba(239, 68, 68, 0.32);
+  background: var(--ew-color-danger-soft);
+}
