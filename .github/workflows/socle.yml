@@ -1,0 +1,14 @@
+# socle-version: 1 — ne pas éditer ici, modifier socle-claude
+# socle-empreinte: sha256:7fc9227dc89791c2
+name: socle
+on: { push: { branches: ["**"] }, pull_request: {} }
+jobs:
+  ci:
+    if: ${{ github.event_name == 'pull_request' || !contains(fromJSON('["INT","VAL","PROD"]'), github.ref_name) }}
+    uses: JazzNeusta/socle-claude/.github/workflows/ci.yml@main
+    secrets: inherit
+  promotion:
+    if: ${{ github.event_name == 'push' && contains(fromJSON('["INT","VAL","PROD"]'), github.ref_name) }}
+    uses: JazzNeusta/socle-claude/.github/workflows/promotion.yml@main
+    permissions: { contents: write }
+    secrets: inherit
