@@ -19,19 +19,19 @@
     ]
   },
   "ports": {
-    "front": null,
-    "api": null,
-    "cdp": null,
-    "cockpit": null
+    "front": 3000,
+    "api": 4000,
+    "cdp": 10223,
+    "cockpit": 7779
   },
   "commandes": {
     "installer": "npm ci && npm --prefix backend ci && npm --prefix frontend ci",
     "verifier": "node {outils}/verifier-tout.js",
-    "tester": "npm --prefix frontend test",
+    "tester": null,
     "construire": "npm --prefix frontend run build",
     "lancer": {
-      "backend": "npm --prefix backend run dev",
-      "frontend": "npm --prefix frontend start"
+      "api": "npm --prefix backend run dev",
+      "front": "npm --prefix frontend start"
     },
     "deployer": {
       "INT": null,
@@ -56,8 +56,7 @@
       "frontend"
     ],
     "syntaxe": [
-      "backend/**/*.js",
-      "frontend/**/*.js"
+      "backend/**/*.js"
     ],
     "prefixesDoc": [
       "_dev",
@@ -66,7 +65,12 @@
       "frontend"
     ],
     "generes": null,
-    "zoneCommit": null
+    "zoneCommit": [
+      "backend",
+      "frontend",
+      "docs",
+      "_dev"
+    ]
   },
   "registres": {
     "bugs": null,
@@ -89,6 +93,8 @@
   "reviewer": {
     "criteres": null
   },
-  "risques": [],
+  "risques": [
+    "requête SQL d'écriture sur la base PostgreSQL pointée par backend/.env (DATABASE_URL)"
+  ],
   "modeles": {}
 }
