@@ -1,0 +1,32 @@
+.ew-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: min(100%, var(--ew-container-width));
+  margin: 0 auto;
+  padding: var(--ew-page-padding) var(--ew-page-padding) 0;
+}
+
+.ew-nav__item {
+  padding: 8px 16px;
+  border-radius: var(--ew-radius-md);
+  color: var(--ew-color-text-muted);
+  background: var(--ew-color-surface);
+  cursor: pointer;
+  transition: background var(--ew-transition-fast), color var(--ew-transition-fast);
+}
+
+.ew-nav__item:hover {
+  color: var(--ew-color-text);
+  background: var(--ew-color-surface-hover);
+}
+
+.ew-nav__item--active {
+  color: var(--ew-color-bg);
+  background: var(--ew-color-primary);
+}
+
+.ew-nav__item:focus-visible {
+  outline: none;
+  box-shadow: var(--ew-shadow-focus);
+}

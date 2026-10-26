@@ -1,0 +1,56 @@
+[
+  {
+    "id": "basilic",
+    "label": "Basilic",
+    "temperature": [18, 28],
+    "humidity": [40, 70],
+    "soilMoisture": [40, 70],
+    "maxHumidex": 35,
+    "tips": "Aime la lumière mais souffre en plein soleil quand il fait très chaud."
+  },
+  {
+    "id": "tomate",
+    "label": "Tomate",
+    "temperature": [16, 30],
+    "humidity": [50, 70],
+    "soilMoisture": [50, 75],
+    "maxHumidex": 38,
+    "tips": "Arroser au pied, sans mouiller le feuillage, pour limiter les maladies."
+  },
+  {
+    "id": "monstera",
+    "label": "Monstera",
+    "temperature": [18, 27],
+    "humidity": [60, 80],
+    "soilMoisture": [35, 60],
+    "maxHumidex": 36,
+    "tips": "Brumiser les feuilles quand l'air est sec."
+  },
+  {
+    "id": "ficus",
+    "label": "Ficus",
+    "temperature": [16, 26],
+    "humidity": [40, 60],
+    "soilMoisture": [30, 55],
+    "maxHumidex": 34,
+    "tips": "Craint les courants d'air et les changements de place."
+  },
+  {
+    "id": "fougere",
+    "label": "Fougère",
+    "temperature": [15, 24],
+    "humidity": [60, 85],
+    "soilMoisture": [50, 80],
+    "maxHumidex": 32,
+    "tips": "Garder le terreau toujours frais, jamais détrempé."
+  },
+  {
+    "id": "cactus",
+    "label": "Cactus",
+    "temperature": [12, 35],
+    "humidity": [10, 50],
+    "soilMoisture": [5, 30],
+    "maxHumidex": 45,
+    "tips": "Laisser sécher complètement le substrat entre deux arrosages."
+  }
+]
