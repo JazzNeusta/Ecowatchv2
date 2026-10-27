@@ -1,6 +1,6 @@
 {
   "name": "ecowatch-v2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "install:all": "npm install --prefix frontend && npm install --prefix backend",

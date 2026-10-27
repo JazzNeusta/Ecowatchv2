@@ -1,0 +1,100 @@
+{
+  "$comment": "Description d'un projet pour le socle. Copié en _dev/projet.json par outils/installer.js, puis ajusté à la main. Toute clé absente = étape sautée, jamais devinée.",
+  "socleVersion": "1",
+  "nom": "Ecowatchv2",
+  "stack": "node-web",
+  "prefixeEcopilot": null,
+  "branches": {
+    "reference": "VAL",
+    "environnements": [
+      "INT",
+      "VAL",
+      "PROD"
+    ],
+    "protegees": [
+      "main",
+      "INT",
+      "VAL",
+      "PROD"
+    ]
+  },
+  "ports": {
+    "front": 3000,
+    "api": 4000,
+    "cdp": 10223,
+    "cockpit": 7779
+  },
+  "commandes": {
+    "installer": "npm ci && npm --prefix backend ci && npm --prefix frontend ci",
+    "verifier": "node {outils}/verifier-tout.js",
+    "tester": null,
+    "construire": "npm --prefix frontend run build",
+    "lancer": {
+      "api": "npm --prefix backend run dev",
+      "front": "npm --prefix frontend start"
+    },
+    "deployer": {
+      "INT": null,
+      "VAL": null,
+      "PROD": null
+    }
+  },
+  "recette": {
+    "mode": null,
+    "lancer": null,
+    "demander": null,
+    "suites": null,
+    "api": null
+  },
+  "version": {
+    "fichier": "package.json",
+    "format": "package.json"
+  },
+  "code": {
+    "racines": [
+      "backend",
+      "frontend"
+    ],
+    "syntaxe": [
+      "backend/**/*.js"
+    ],
+    "prefixesDoc": [
+      "_dev",
+      "backend",
+      "docs",
+      "frontend"
+    ],
+    "generes": null,
+    "zoneCommit": [
+      "backend",
+      "frontend",
+      "docs",
+      "_dev"
+    ]
+  },
+  "registres": {
+    "bugs": null,
+    "codeMort": null,
+    "go": null,
+    "questions": null,
+    "chantiers": null
+  },
+  "sorties": "_dev/sorties",
+  "roles": {
+    "orchestre": "orchestre-Ecowatchv2",
+    "ouvriere": "ouvriere-Ecowatchv2",
+    "complement": null
+  },
+  "uat": {
+    "source": null,
+    "scenarios": null,
+    "compteTest": null
+  },
+  "reviewer": {
+    "criteres": null
+  },
+  "risques": [
+    "requête SQL d'écriture sur la base PostgreSQL pointée par backend/.env (DATABASE_URL)"
+  ],
+  "modeles": {}
+}
